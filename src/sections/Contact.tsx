@@ -18,6 +18,7 @@ export const ContactSection = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">
+                {/* eslint-disable-next-line react/no-unescaped-entities*/}
                 Let's create some amazing things together
               </h2>
               <p className="text-sm md:text-base mt-2">
