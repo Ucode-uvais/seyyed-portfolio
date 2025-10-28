@@ -45,7 +45,7 @@ export const SkillsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="text-primary">Skills</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto px-4">
             A curated list of my technical capabilities, from frontend design to
             backend architecture and deployment.
           </p>
@@ -58,14 +58,18 @@ export const SkillsSection = () => {
             return (
               <div
                 key={category}
-                className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50"
+                className="bg-card rounded-xl p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className={`p-2 rounded-lg ${data.color} border`}>
+                  <div
+                    className={`p-2 rounded-lg ${data.color} border flex-shrink-0`}
+                  >
                     <IconComponent className="w-5 h-5" />
                   </div>
-                  <h3 className="text-xl font-semibold">{data.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-tight break-words">
+                    {data.title}
+                  </h3>
                 </div>
 
                 {/* Skills Tags */}
@@ -73,7 +77,7 @@ export const SkillsSection = () => {
                   {data.skills.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1.5 text-sm bg-secondary/70 hover:bg-secondary rounded-md transition-colors duration-200 border border-border/30"
+                      className="px-2.5 py-1 text-xs sm:text-sm bg-secondary/70 hover:bg-secondary rounded-md transition-colors duration-200 border border-border/30"
                     >
                       {skill}
                     </span>

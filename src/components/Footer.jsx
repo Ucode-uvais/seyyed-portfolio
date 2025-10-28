@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/seyyeduvais",
+    href: "https://github.com/Ucode-uvais",
     icon: LiaGithub,
   },
   {
@@ -25,7 +25,7 @@ const socialLinks = [
   },
   {
     name: "WhatsApp",
-    href: "https://wa.me/8606074854",
+    href: "https://wa.me/918606074854",
     icon: LiaWhatsapp,
   },
 ];

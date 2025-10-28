@@ -4,7 +4,7 @@ import { LiaWhatsapp } from "react-icons/lia";
 import { cn } from "@/lib/utils"; //
 
 export const WhatsAppChat = ({ isVisible }) => {
-  const whatsappUrl = "https://wa.me/8606074854";
+  const whatsappUrl = "https://wa.me/918606074854";
 
   return (
     <a
