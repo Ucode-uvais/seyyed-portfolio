@@ -85,8 +85,7 @@ export const ProjectsSection = () => {
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Explore my latest projects showcasing modern web technologies and
-            innovative solutions.
+            Explore my latest projects showcasing modern web technologies.
           </p>
         </div>
 
@@ -95,12 +94,12 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative"
+              className="group relative opacity-0 animate-fade-in"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
               style={{
-                animation: `fade-in 0.6s ease-out ${index * 0.1}s forwards`,
-                opacity: 0,
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: "forwards",
               }}
             >
               {/* Card container with gradient border effect */}
@@ -126,14 +125,13 @@ export const ProjectsSection = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
-                  {/* Overlay with quick actions */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-3">
+                  {/* Overlay with quick actions - Always visible on mobile, hover on desktop */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-3">
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-110 transform translate-y-4 group-hover:translate-y-0"
-                      style={{ transitionDelay: "50ms" }}
+                      className="p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-110"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink size={18} />
@@ -142,8 +140,7 @@ export const ProjectsSection = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-110 transform translate-y-4 group-hover:translate-y-0"
-                      style={{ transitionDelay: "100ms" }}
+                      className="p-3 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-110"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <Github size={18} />
@@ -211,19 +208,6 @@ export const ProjectsSection = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };

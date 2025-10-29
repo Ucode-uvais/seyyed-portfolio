@@ -17,7 +17,7 @@ export const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               <span className="opacity-0 animate-fade-in-delay-1">
                 Hi, I'm{" "}
               </span>
@@ -33,7 +33,7 @@ export const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl opacity-0 animate-fade-in-delay-3 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl opacity-0 animate-fade-in-delay-3 leading-relaxed mx-auto lg:mx-0">
               I create stellar web experiences with modern technologies.
               Specializing in frontend development, I build interfaces that are
               both beautiful and functional.
@@ -56,7 +56,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Photo - unchanged */}
+          {/* Profile Photo */}
           <div className="relative flex justify-center lg:justify-end opacity-0 animate-fade-in-delay-2">
             <div className="relative">
               {/* Decorative Background */}

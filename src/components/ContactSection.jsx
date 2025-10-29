@@ -150,7 +150,7 @@ export const ContactSection = () => {
               type="submit"
               disabled={isSubmitting}
               className={cn(
-                "cosmic-button w-full md:w-auto px-8 py-3 flex items-center justify-center gap-2",
+                "cosmic-button w-full md:w-auto px-8 py-3 inline-flex items-center justify-center gap-2",
                 isSubmitting && "opacity-70 cursor-not-allowed"
               )}
             >
@@ -161,8 +161,8 @@ export const ContactSection = () => {
                 </>
               ) : (
                 <>
-                  Send Message
-                  <Send size={18} />
+                  <span>Send Message</span>
+                  <Send size={18} className="flex-shrink-0 translate-y-[1px]" />
                 </>
               )}
             </button>
