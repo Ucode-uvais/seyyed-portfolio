@@ -7,11 +7,9 @@ import { usePageLoader } from "./hooks/usePageLoader";
 
 function App() {
   const isLoading = usePageLoader(1500); // Minimum 1.5 seconds
-  if (isLoading) {
-    return <Loader isLoading={isLoading} />;
-  }
   return (
     <>
+      <Loader isLoading={isLoading} />
       <Toaster />
       <BrowserRouter>
         <Routes>

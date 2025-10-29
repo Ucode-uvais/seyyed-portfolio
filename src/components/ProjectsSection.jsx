@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Star, TrendingUp } from "lucide-react";
+import { ExternalLink, Star, TrendingUp } from "lucide-react";
 import { LiaGithub } from "react-icons/lia";
 import { FaGithub } from "react-icons/fa6";
 import { useState } from "react";
@@ -143,7 +143,7 @@ export const ProjectsSection = () => {
                       className="p-3 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-110"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github size={18} />
+                      <LiaGithub size={18} />
                     </a>
                   </div>
                 </div>
@@ -160,9 +160,9 @@ export const ProjectsSection = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
+                    {project.tags.map((tag) => (
                       <span
-                        key={tagIndex}
+                        key={tag}
                         className="px-3 py-1 text-xs font-medium rounded-full bg-secondary/80 hover:bg-secondary transition-colors duration-200 border border-border/30"
                       >
                         {tag}
