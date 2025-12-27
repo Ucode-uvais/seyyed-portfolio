@@ -19,7 +19,7 @@ export const HeroSection = () => {
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               <span className="opacity-0 animate-fade-in-delay-1">
-                Hi, I'm{" "}
+                {`Hi, I'm `}
               </span>
               <span className="text-primary opacity-0 animate-fade-in-delay-1">
                 Seyyed Uvais
